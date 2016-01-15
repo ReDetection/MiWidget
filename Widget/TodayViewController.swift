@@ -15,7 +15,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func buttonTapped(sender: UIButton) {
         let index = buttons.indexOf(sender)!
-        udpSend(IP_ADDRESS, port: PORT, data: COMMANDS[index]!, length: 3)
+        udpSend(IP_ADDRESS, port: PORT, data: COMMANDS[index]!)
     }
     
     func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {

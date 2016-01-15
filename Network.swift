@@ -8,7 +8,7 @@
 
 import CoreFoundation
 
-func udpSend(addressString: String, port: CUnsignedShort, data: [UInt8], length: UInt) {
+func udpSend(addressString: String, port: CUnsignedShort, data: [UInt8]) {
     func htons(value: CUnsignedShort) -> CUnsignedShort {
         return (value << 8) + (value >> 8);
     }
