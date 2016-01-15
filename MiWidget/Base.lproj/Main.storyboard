@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MiWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="mkO-7X-abH">
+                                <rect key="frame" x="140" y="270" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6c-tG-Dtr">
+                                        <rect key="frame" x="80" y="0.0" width="80" height="60"/>
+                                        <state key="normal" title="down">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Rz-UD-xCl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-b8-Sff">
+                                        <rect key="frame" x="160" y="0.0" width="80" height="60"/>
+                                        <state key="normal" title="up">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4iQ-NG-kI7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lal-JA-O5q">
+                                        <rect key="frame" x="240" y="0.0" width="80" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="T6J-Cx-Eu5"/>
+                                        </constraints>
+                                        <state key="normal" title="on">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rd8-xo-FOf">
+                                        <rect key="frame" x="160" y="0.0" width="0.0" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" id="q1N-mw-uKu"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oe4-OO-PMK">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+                                        <state key="normal" title="off">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t2c-wG-AO3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QYq-b8-Sff" firstAttribute="leading" secondItem="rd8-xo-FOf" secondAttribute="trailing" id="0WS-84-hre"/>
+                                    <constraint firstAttribute="centerX" secondItem="rd8-xo-FOf" secondAttribute="centerX" id="2Bm-4i-Hk9"/>
+                                    <constraint firstItem="oe4-OO-PMK" firstAttribute="top" secondItem="mkO-7X-abH" secondAttribute="top" id="466-9x-XgM"/>
+                                    <constraint firstItem="f6c-tG-Dtr" firstAttribute="top" secondItem="mkO-7X-abH" secondAttribute="top" id="5Pe-3q-GQV"/>
+                                    <constraint firstItem="oe4-OO-PMK" firstAttribute="leading" secondItem="mkO-7X-abH" secondAttribute="leading" id="Adn-i1-EJb"/>
+                                    <constraint firstAttribute="bottom" secondItem="oe4-OO-PMK" secondAttribute="bottom" id="DdI-sK-HoA"/>
+                                    <constraint firstAttribute="height" constant="60" id="Fst-rd-xFa"/>
+                                    <constraint firstItem="QYq-b8-Sff" firstAttribute="top" secondItem="mkO-7X-abH" secondAttribute="top" id="KJB-75-Sao"/>
+                                    <constraint firstAttribute="bottom" secondItem="rd8-xo-FOf" secondAttribute="bottom" id="MNe-Zc-NZS"/>
+                                    <constraint firstAttribute="bottom" secondItem="f6c-tG-Dtr" secondAttribute="bottom" id="MuT-1N-Ylr"/>
+                                    <constraint firstItem="rd8-xo-FOf" firstAttribute="top" secondItem="mkO-7X-abH" secondAttribute="top" id="UUQ-yc-Dc0"/>
+                                    <constraint firstItem="f6c-tG-Dtr" firstAttribute="width" secondItem="Lal-JA-O5q" secondAttribute="width" id="Vgy-5K-wvD"/>
+                                    <constraint firstAttribute="bottom" secondItem="QYq-b8-Sff" secondAttribute="bottom" id="XMj-qc-TPD"/>
+                                    <constraint firstAttribute="width" constant="320" id="cZL-Ra-Wpb"/>
+                                    <constraint firstItem="Lal-JA-O5q" firstAttribute="leading" secondItem="QYq-b8-Sff" secondAttribute="trailing" id="cae-wC-7jg"/>
+                                    <constraint firstItem="f6c-tG-Dtr" firstAttribute="leading" secondItem="oe4-OO-PMK" secondAttribute="trailing" id="dCM-9P-1NN"/>
+                                    <constraint firstItem="Lal-JA-O5q" firstAttribute="top" secondItem="mkO-7X-abH" secondAttribute="top" id="h1c-3u-gc0"/>
+                                    <constraint firstItem="f6c-tG-Dtr" firstAttribute="leading" secondItem="oe4-OO-PMK" secondAttribute="trailing" id="mjv-k7-3Os"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lal-JA-O5q" secondAttribute="bottom" id="qgx-j7-E0d"/>
+                                    <constraint firstItem="rd8-xo-FOf" firstAttribute="leading" secondItem="f6c-tG-Dtr" secondAttribute="trailing" id="tpz-Cn-nqU"/>
+                                    <constraint firstItem="f6c-tG-Dtr" firstAttribute="width" secondItem="oe4-OO-PMK" secondAttribute="width" id="wpu-z5-TlR"/>
+                                    <constraint firstItem="f6c-tG-Dtr" firstAttribute="width" secondItem="QYq-b8-Sff" secondAttribute="width" id="yBX-F9-4fe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="mkO-7X-abH" secondAttribute="centerY" id="5vJ-Me-d6G"/>
+                            <constraint firstAttribute="centerX" secondItem="mkO-7X-abH" secondAttribute="centerX" id="W67-Ev-uQe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="buttons" destination="oe4-OO-PMK" collectionClass="NSMutableArray" id="aWw-lh-v7m"/>
+                        <outletCollection property="buttons" destination="f6c-tG-Dtr" collectionClass="NSMutableArray" id="v7v-kw-XoQ"/>
+                        <outletCollection property="buttons" destination="QYq-b8-Sff" collectionClass="NSMutableArray" id="DuT-pp-hIT"/>
+                        <outletCollection property="buttons" destination="Lal-JA-O5q" collectionClass="NSMutableArray" id="v9U-mf-dm9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
