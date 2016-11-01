@@ -13,8 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var buttons: [UIButton]!
     
-    @IBAction func buttonTapped(sender: UIButton) {
-        let index = buttons.indexOf(sender)!
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        let index = buttons.index(of: sender)!
         udpSend(IP_ADDRESS, port: PORT, data: COMMANDS[index]!)
     }
     
