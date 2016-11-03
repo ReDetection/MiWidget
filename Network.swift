@@ -8,12 +8,12 @@
 
 import CoreFoundation
 
-func udpSend(_ addressString: String, port: CUnsignedShort, data: [UInt8]) {
+func udpSend(to address: String, port: CUnsignedShort, data: [UInt8]) {
     func htons(_ value: CUnsignedShort) -> CUnsignedShort {
         return (value << 8) + (value >> 8);
     }
     var addr = sockaddr_in()
-    addressString.withCString{ ptr -> Void in
+    address.withCString{ ptr -> Void in
         inet_pton(AF_INET, ptr, &addr.sin_addr)
     }
     addr.sin_port = htons(port)
@@ -22,8 +22,8 @@ func udpSend(_ addressString: String, port: CUnsignedShort, data: [UInt8]) {
     let fd = socket(AF_INET, SOCK_DGRAM, 0)
     
     data.withUnsafeBufferPointer { (dataPtr) -> Void in
-        withUnsafePointer(to: &addr) { addrUnsafe -> Void in
-            let addrptr = UnsafePointer<sockaddr>(addrUnsafe)
+        withUnsafePointer(to: &addr) { (addrPtr) -> Void in
+            let addrptr = UnsafeRawPointer(addrPtr).bindMemory(to: sockaddr.self, capacity:  MemoryLayout<sockaddr>.size)
             sendto(fd, dataPtr.baseAddress, data.count, 0, addrptr, socklen_t(addr.sin_len))
         }
     }
